@@ -1,18 +1,5 @@
 #include <stdio.h>
-
-int	menu(){
-int	scelta;
-
-scelta = 0;
-while (scelta < 1 || scelta > 4){ 
-printf("\t\t Menu\n");
-printf("1. Pollo arrosto in salsa ai funghi speziati\n");
-printf("2. Calamari fritti con maionese vegana al limone\n");
-printf("3. Spaghetti allo scoglio di Goldo Aranci\n");
-printf("4. Sgombro al sapore d'estate\n");
-printf("Cosa desideri per cena? Inserisci il numero: ");
-scanf("%d", &scelta);}
-return (scelta);}
+#include "firstfile.h"
 
 int	main(int argc, char *argv[]){
 switch (menu()){
@@ -26,4 +13,17 @@ switch (menu()){
 	break;}
 return (0);
 }
-	
+
+int     menu(){
+int     scelta;
+
+scelta = 0;
+while (scelta < 1 || scelta > 4){
+printf("\t\t Menu\n");
+printf("1. Pollo arrosto in salsa ai funghi speziati\n");
+printf("2. Calamari fritti con maionese vegana al limone\n");
+printf("3. Spaghetti allo scoglio di Goldo Aranci\n");
+printf("4. Sgombro al sapore d'estate\n");
+printf("Cosa desideri per cena? Inserisci il numero: ");
+scanf("%d", &scelta);}
+return (scelta);}	
