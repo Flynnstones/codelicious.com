@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void	Minutaggio(int* puntatore, int* puntaminuti);
+void	minutaggio(int* puntaOre, int* puntaMinuti);
 
 int	main(int argc, char *argv[])
 {
@@ -9,16 +9,23 @@ int	main(int argc, char *argv[])
 
 	ore = 0;
 	minuti = 90;
-	Minutaggio(&ore, &minuti);
-	if (ore == 0 || ore > 1){
-	printf("%d ore e %d minuti\n", ore, minuti);}
-	else {
-	printf("%d ora e %d minuti\n", ore, minuti);}
-	return (0);
+	minutaggio(&ore, &minuti);
+	while (ore >= 0)
+	{
+		if(ore == 1)
+		{	
+			printf("%d ora e %d minuti\n", ore, minuti);
+		}
+		else 
+		{
+			printf("%d ore e %d minuti\n", ore, minuti);
+		}
+		return(0);
+	}
 }
 
-void	Minutaggio(int* puntatore, int* puntaminuti)
+void	minutaggio(int* puntaOre, int* puntaMinuti)
 {
-	*puntatore = *puntaminuti / 60;
-	*puntaminuti = *puntaminuti % 60;
+	*puntaOre = *puntaMinuti / 60;
+	*puntaMinuti = *puntaMinuti % 60;
 }
